@@ -24,3 +24,13 @@ Route::get('/user', 'Usercontroller@getUser');
 Route::post('/createUser', 'Usercontroller@createUser');
 
 Route::put('/updateUser/{id}', 'usercontroller@updateUser');
+
+Route::get('/cash', 'CashController@show_card');
+
+Route::post('/paid_card', 'CashController@paid_card');
+
+Route::get('/product','ProductController@Show_Acc');
+
+Route::get('/product/{id}', 'ProductController@Show_Acc_ByID');
+
+Route::post('/orderproduct', 'TransactionHistoryController@Order_product');

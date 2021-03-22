@@ -23,8 +23,8 @@ class Accounts extends Migration
             $table->bigIncrements('id');
             $table->string('username');
             $table->string('password');
-            $table->unsignedBigInteger('products_id');// khoa ngoai
-            $table->timestamps();
+            $table->string('imageUser');
+            $table->unsignedBigInteger('products_id')->nullable();// khoa ngoai
         });
     }
 

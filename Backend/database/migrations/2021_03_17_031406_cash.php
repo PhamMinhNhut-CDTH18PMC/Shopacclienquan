@@ -21,7 +21,6 @@ class Cash extends Migration
             $table->decimal('money');
             $table->integer('denominations');// mệnh giá
             $table->unsignedBigInteger('accounts_id');// khóa ngoại
-            $table->timestamps();
         });
     }
 

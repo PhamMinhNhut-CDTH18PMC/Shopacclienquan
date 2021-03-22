@@ -30,7 +30,6 @@ class AddConstraintcash extends Migration
         //
         Schema::table('cash', function (Blueprint $table) {
             $table->dropForeign('cash_accounts_id_foreign');
-
         });
     }
 }
