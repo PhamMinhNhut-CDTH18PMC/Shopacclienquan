@@ -18,7 +18,6 @@ class Cash extends Migration
             $table->bigIncrements('id');
             $table->string('seri');
             $table->string('ID_card');
-            $table->decimal('money');
             $table->integer('denominations');// mệnh giá
             $table->unsignedBigInteger('accounts_id');// khóa ngoại
         });

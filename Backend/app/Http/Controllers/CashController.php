@@ -11,7 +11,6 @@ class CashController extends Controller
     {
             $data = Cash::get();
             return response()->json($data,200);
-
     }
 
     public function messages()
@@ -28,7 +27,6 @@ class CashController extends Controller
             $data = new Cash;
             $data->seri=$request->seri;
             $data->ID_card=$request->ID_card;
-            $data->money=$request->money;
             $data->denominations=$request->denominations;
             $data->accounts_id=$request->accounts_id;
             $data->save();

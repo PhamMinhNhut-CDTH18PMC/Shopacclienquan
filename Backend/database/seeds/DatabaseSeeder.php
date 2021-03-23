@@ -23,9 +23,9 @@ class Account extends Seeder
     public function run()
     {
         DB::table('accounts')->insert([
-            ['username'=>'MinhNhut', 'password'=>bcrypt('12345'), 'imageUser'=>'Phungu.jpg','products_id'=>null],
-            ['username'=>'Phungu', 'password'=>bcrypt('phuquangu'),'imageUser'=>'Phungu.jpg', 'products_id'=>null],
-            ['username'=>'camnhung', 'password'=>bcrypt('camnhung'),'imageUser'=>'Phungu.jpg', 'products_id'=>null]
+            ['username'=>'MinhNhut', 'password'=>bcrypt('12345'), 'imageUser'=>'Phungu.jpg','money'=>20000,'products_id'=>null],
+            ['username'=>'Phungu', 'password'=>bcrypt('phuquangu'),'imageUser'=>'Phungu.jpg','money'=>20000, 'products_id'=>null],
+            ['username'=>'camnhung', 'password'=>bcrypt('camnhung'),'imageUser'=>'Phungu.jpg','money'=>20000, 'products_id'=>null]
 
 
         ]);

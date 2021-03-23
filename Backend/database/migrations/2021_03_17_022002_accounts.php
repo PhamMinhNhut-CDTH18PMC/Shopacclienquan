@@ -24,6 +24,7 @@ class Accounts extends Migration
             $table->string('username');
             $table->string('password');
             $table->string('imageUser');
+            $table->decimal('money');
             $table->unsignedBigInteger('products_id')->nullable();// khoa ngoai
         });
     }

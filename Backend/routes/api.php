@@ -34,3 +34,5 @@ Route::get('/product','ProductController@Show_Acc');
 Route::get('/product/{id}', 'ProductController@Show_Acc_ByID');
 
 Route::post('/orderproduct', 'TransactionHistoryController@Order_product');
+
+Route::get('/account','AccountController@Show_Account');
