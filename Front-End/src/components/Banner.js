@@ -3,6 +3,7 @@ import "react-slideshow-image/dist/styles.css";
 import run from "../images/run.gif";
 import plane from "../images/tructhang.gif";
 import wow from "../images/wow.gif";
+import Filter from "./Filter";
 class Banner extends Component {
   render() {
     return (
@@ -91,23 +92,6 @@ class Banner extends Component {
             </marquee>
             <br />
             <br />
-            <div className="text-center">
-              <button className="btn btn-outline-warning">
-                Thử Vận May 5k
-              </button>
-              <button className="btn btn-outline-danger">Acc 50k</button>
-              <button className="btn btn-outline-secondary">
-                Acc 70k - 100k
-              </button>
-              <button className="btn btn-outline-success">
-                Acc 100k - 500k
-              </button>
-              <button className="btn btn-outline-primary">
-                Acc 500k - 1tr
-              </button>
-              <button className="btn btn-outline-info">Acc 1tr - 1tr2</button>
-            </div>
-            <br />
             <marquee className="chuchay2">
               <div>
                 <img width={36} height={36} src={run} longdesc={36} />
@@ -115,6 +99,7 @@ class Banner extends Component {
                 người nha!!!!!!!!!!!!!
               </div>
             </marquee>
+            <Filter/>
           </div>
         </div>
       </div>

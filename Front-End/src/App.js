@@ -5,8 +5,9 @@ import Banner from './components/Banner';
 import Body from './components/Body';
 import { Component } from "react";
 import axios from 'axios';
+import Footer from './components/Footer';
+import ProductDetail from './page/ProductDetail/ProductDetail';
 class App  extends Component  {
-
   constructor(props)
   {
       super(props);
@@ -18,7 +19,7 @@ class App  extends Component  {
           accounts_id:''
         }
       }
-      console.log('cash ne :',this.state.cash);
+      console.log('cash nè :',this.state.cash);
   }
 
   componentDidMount()
@@ -29,7 +30,7 @@ class App  extends Component  {
       this.setState({
           cash:response.data,
       },()=>{
-        console.log('Cash new :',this.state.cash);
+        console.log('Cash mới nè :',this.state.cash);
 
       });
     })
@@ -39,9 +40,11 @@ class App  extends Component  {
   {
     return (
       <div>
-          <Header/>
+          {/* <Header/>
           <Banner/>
           <Body/>
+          <Footer/> */}
+          <ProductDetail/>
       </div>    
       );
   };
