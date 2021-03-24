@@ -1,360 +1,356 @@
-
- html,
- body {
-   overflow-x: hidden;
-   width: 100%;
-   height: auto;
-   box-sizing: inherit;
- }
- 
-#root
-{
-  background-color: black;
-
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: auto;
+  box-sizing: inherit;
 }
- .navbar {
-   border-bottom: 1px solid #ffc107;
-   color: #ffffff;
- }
- 
- .fa-bars {
-   color: #ffc107;
- }
- 
- .bg-darkk {
-   background-color: #000000d1;
- }
- 
- .modal-header h4 {
-   margin-left: 10pc;
- }
- 
- .modal-body {
-   margin: 0 auto;
-   padding: 20px 20px 1px;
-   max-width: 100%;
-   overflow: visible;
- }
- .modal-content {
-   min-width: 700px;
- }
- 
- .nav-link,
- .navbar-brand {
-   color: #cccccc;
- }
- 
- .Menu {
-   padding: 10px;
- }
- 
- .Menu ul li a:hover {
-   color: #ffc107;
-   padding: 10px;
- }
- 
- .Menu a.active {
-   color: #ffc107;
-   padding: 10px;
- }
- 
- .table-recharge {
-   box-shadow: 0px 1px 17px 3px #ffc107;
- }
- 
- .header {
-   padding-bottom: 145px;
- }
- 
- iframe {
-   width: 100%;
-   height: 315px;
- }
- 
- .thead {
-   border-bottom: 1px solid #ffc107;
- }
- 
- .thead-content {
-   padding: 8px;
-   text-align: center;
- }
- 
- .form-group {
-   padding: 28px;
- }
- 
- .banner {
-   margin: 30px 50px 10px 50px;
- }
- 
- .Sale {
-   background-color: #ffc107;
-   color: black;
-   border-radius: 9px;
-   padding: 4px;
- }
- 
- .chuchay2 {
-   color: #ffffff;
- }
- 
- .body {
-   padding: 0 40px;
- }
- 
- .buttonn {
-   /* margin-top: 30px; */
-   margin-left: 30%;
- }
- 
- .content-body {
-   margin-top: 20px;
-   border: 1px solid;
-   box-sizing: inherit;
- }
- 
- .cardd,
- .panel {
-   box-shadow: 0px 0px 4px 0px #ffffff;
-   background-color: black;
-   width: 270px;
- }
- 
- .card-img-top {
-   height: 150px;
- }
- 
- .btn-groupp {
-   letter-spacing: 26px;
- }
- 
- .header-card {
-   position: relative;
-   color: #ffc107;
-   padding-top: 16px;
- }
- 
- .header-card p img {
-   position: relative;
-   float: right;
-   margin: -19px -3px;
- }
- 
- .text-sale {
-   position: absolute;
-   margin: -14px 68px;
-   color: black;
- }
- 
- .card-body h5 {
-   color: #ffc107;
- }
- 
- .card-body del {
-   color: #ffc10785;
- }
- 
- .star {
-   float: left;
-   width: 30px;
-   height: 30px;
-   margin: -5px 0px 0px 22px;
- }
- 
- .acc {
-   display: inline-block;
-   width: 288px;
-   height: 484px;
- }
- 
- .panel {
-   padding: 50px;
-   color: #ffc107;
-   display: none;
-   box-shadow: none;
-   background-color: rgba(0, 0, 0, 0.74);
-   position: absolute;
- }
- 
- .group-acc {
-   margin-left: 20px;
- }
- 
- .pagination a {
-   padding: 8px 16px;
-   color: #ffc107;
-   border: 1px solid #ffc107;
-   border-radius: 28px;
-   margin: 0 4px;
- }
- 
- .pagination a.active {
-   background-color: rgb(255, 254, 254);
-   color: black;
- }
- 
- .pagination a:hover:not(.active) {
-   background-color: rgb(255, 254, 254);
-   color: black;
- }
- 
- a.fb:hover {
-   color: rgb(60, 76, 223);
- }
- 
- a.yt:hover {
-   color: red;
- }
- 
- a.tw:hover {
-   color: rgb(0, 132, 255);
- }
- 
- .footer-icon {
-   font-size: 40px;
-   text-align: center;
-   letter-spacing: 28px;
-   margin-top: 25px;
- }
- 
- .footer-content {
-   color: #cccccc;
-   padding-top: 32px;
- }
- 
- .footer-location {
-   text-align: center;
- }
- 
- .footer {
-   background-color: black;
-   border-top: 1px solid #ffc107;
-   margin-top: 30px;
- }
- 
- .footer-source {
-   text-align: center;
-   margin-top: 46px;
- }
- 
- @media screen and (max-width: 767px) {
-   .acc {
-     height: 540px;
-   }
- }
- 
- /* CSS Giới Thiệu */
- 
- .gioithieu {
-   color: #cccccc;
-   padding: 58px;
-   letter-spacing: 1px;
-   line-height: 2;
- }
- 
- /* CSS Bảng Cập Nhật Mùa 10 */
- 
- .cn-mua10 {
-   color: #cccccc;
-   padding: 58px;
-   letter-spacing: 1px;
-   line-height: 2;
- }
- 
- /* CSS Thông Tin Bảng Ngọc */
- 
- .tt_bangngoc {
-   color: #cccccc;
-   padding: 58px;
-   letter-spacing: 1px;
-   line-height: 2;
- }
- 
- .tt_bangngoc img {
-   width: 500px;
- }
- 
- .tt_bangngoc h3 {
-   color: rgb(0, 225, 255);
- }
- 
- .text-purple {
-   color: rgb(233, 3, 233);
- }
- 
- .tt_bn {
-   padding: 44px;
- }
- 
- @media screen and (max-width: 1199px) {
-   .tt_bangngoc img {
-     width: 404px;
-   }
-   .tt_bn {
-     padding: 22px;
-   }
- }
- 
- @media screen and (max-width: 544px) {
-   .tt_bangngoc img {
-     width: 72vw;
-   }
- }
- 
- /* CSS Cập Nhật Rank */
- 
- .cn-rank {
-   color: #cccccc;
-   padding: 58px;
-   letter-spacing: 1px;
-   line-height: 2;
- }
- 
- .table-gift {
-   box-shadow: 0px 0px 4px 0px #ffffff;
-   margin: 32px 202px 0px 237px;
- }
- 
- /* CSS Lịch Sử Giao Dịch */
- 
- .transaction-history {
-   padding: 58px;
-   letter-spacing: 1px;
-   line-height: 2;
- }
- 
- /* CSS Nạp Thẻ */
- 
- .napthe1 {
-   padding: 58px;
-   margin: 32px 202px 0px 237px;
-   letter-spacing: 1px;
-   line-height: 2;
- }
- button.btn.btn-warning.btncard {
+
+#root {
+  background-color: black;
+}
+.navbar {
+  border-bottom: 1px solid #ffc107;
+  color: #ffffff;
+}
+
+.fa-bars {
+  color: #ffc107;
+}
+
+.bg-darkk {
+  background-color: #000000d1;
+}
+
+.modal-header h4 {
+  margin-left: 10pc;
+}
+
+.modal-body {
+  margin: 0 auto;
+  padding: 20px 20px 1px;
+  max-width: 100%;
+  overflow: visible;
+}
+.modal-content {
+  min-width: 700px;
+}
+
+.nav-link,
+.navbar-brand {
+  color: #cccccc;
+}
+
+.Menu {
+  padding: 10px;
+}
+
+.Menu ul li a:hover {
+  color: #ffc107;
+  padding: 10px;
+}
+
+.Menu a.active {
+  color: #ffc107;
+  padding: 10px;
+}
+
+.table-recharge {
+  box-shadow: 0px 1px 17px 3px #ffc107;
+}
+
+.header {
+  padding-bottom: 145px;
+}
+
+iframe {
+  width: 100%;
+  height: 315px;
+}
+
+.thead {
+  border-bottom: 1px solid #ffc107;
+}
+
+.thead-content {
+  padding: 8px;
+  text-align: center;
+}
+
+.form-group {
+  padding: 28px;
+}
+
+.banner {
+  margin: 30px 50px 10px 50px;
+}
+
+.Sale {
+  background-color: #ffc107;
+  color: black;
+  border-radius: 9px;
+  padding: 4px;
+}
+
+.chuchay2 {
+  color: #ffffff;
+}
+
+.body {
+  padding: 0 40px;
+}
+
+.buttonn {
+  /* margin-top: 30px; */
+  margin-left: 20%;
+}
+
+.content-body {
+  margin-top: 20px;
+  border: 1px solid;
+  box-sizing: inherit;
+}
+
+.cardd,
+.panel {
+  box-shadow: 0px 0px 4px 0px #ffffff;
+  background-color: black;
+  width: 270px;
+}
+
+.card-img-top {
+  height: 150px;
+}
+
+.btn-groupp {
+  letter-spacing: 26px;
+}
+
+.header-card {
+  position: relative;
+  color: #ffc107;
+  padding-top: 16px;
+}
+
+.header-card p img {
+  position: relative;
+  float: right;
+  margin: -19px -3px;
+}
+
+.text-sale {
+  position: absolute;
+  margin: -14px 68px;
+  color: black;
+}
+
+.card-body h5 {
+  color: #ffc107;
+}
+
+.card-body del {
+  color: #ffc10785;
+}
+
+.star {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin: -5px 0px 0px 22px;
+}
+
+.acc {
+  display: inline-block;
+  width: 288px;
+  height: 484px;
+}
+
+.panel {
+  padding: 50px;
+  color: #ffc107;
+  display: none;
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.74);
+  position: absolute;
+}
+
+.group-acc {
+  margin-left: 20px;
+}
+
+.pagination a {
+  padding: 8px 16px;
+  color: #ffc107;
+  border: 1px solid #ffc107;
+  border-radius: 28px;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: rgb(255, 254, 254);
+  color: black;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: rgb(255, 254, 254);
+  color: black;
+}
+
+a.fb:hover {
+  color: rgb(60, 76, 223);
+}
+
+a.yt:hover {
+  color: red;
+}
+
+a.tw:hover {
+  color: rgb(0, 132, 255);
+}
+
+.footer-icon {
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 28px;
+  margin-top: 25px;
+}
+
+.footer-content {
+  color: #cccccc;
+  padding-top: 32px;
+}
+
+.footer-location {
+  text-align: center;
+}
+
+.footer {
+  background-color: black;
+  border-top: 1px solid #ffc107;
+  margin-top: 30px;
+}
+
+.footer-source {
+  text-align: center;
+  margin-top: 46px;
+}
+
+@media screen and (max-width: 767px) {
+  .acc {
+    height: 540px;
+  }
+}
+
+/* CSS Giới Thiệu */
+
+.gioithieu {
+  color: #cccccc;
+  padding: 58px;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+/* CSS Bảng Cập Nhật Mùa 10 */
+
+.cn-mua10 {
+  color: #cccccc;
+  padding: 58px;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+/* CSS Thông Tin Bảng Ngọc */
+
+.tt_bangngoc {
+  color: #cccccc;
+  padding: 58px;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+.tt_bangngoc img {
+  width: 500px;
+}
+
+.tt_bangngoc h3 {
+  color: rgb(0, 225, 255);
+}
+
+.text-purple {
+  color: rgb(233, 3, 233);
+}
+
+.tt_bn {
+  padding: 44px;
+}
+
+@media screen and (max-width: 1199px) {
+  .tt_bangngoc img {
+    width: 404px;
+  }
+  .tt_bn {
+    padding: 22px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .tt_bangngoc img {
+    width: 72vw;
+  }
+}
+
+/* CSS Cập Nhật Rank */
+
+.cn-rank {
+  color: #cccccc;
+  padding: 58px;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+.table-gift {
+  box-shadow: 0px 0px 4px 0px #ffffff;
+  margin: 32px 202px 0px 237px;
+}
+
+/* CSS Lịch Sử Giao Dịch */
+
+.transaction-history {
+  padding: 58px;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+/* CSS Nạp Thẻ */
+
+.napthe1 {
+  padding: 58px;
+  margin: 32px 202px 0px 237px;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+button.btn.btn-warning.btncard {
   margin-left: 20px;
 }
 /* CSS Logo*/
-.logo
-{
+.logo {
   width: 60px;
 }
 
-.navbar-nav:hover{
+.navbar-nav:hover {
   cursor: pointer;
 }
 
-@media  (min-width: 1200px){
-.container {
+@media (min-width: 1200px) {
+  .container {
     width: 1200px;
   }
 }
 
-.container{
+.container {
   position: relative;
 }
-.sa-lprod{
+.sa-lprod {
   padding: 2px;
 }
 
@@ -382,7 +378,7 @@
   float: right;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
@@ -399,5 +395,87 @@ ul{
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
+}
+
+.btn-muaacc {
+  font-weight: 700 !important;
+  font-size: 21px !important;
+  background: #32c5d2 !important;
+}
+
+.sa-ttacc-tabs {
+  background: #000;
+  border-bottom: 2px solid #151515;
+  margin: 10px 0;
+}
+
+.sa-ttacc-tabs li.active a {
+  color: #fff;
+  background: #88b2f6;
+}
+
+.sa-ttacc-tabs li a {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  color: #32c5d2;
+  padding: 15px;
+}
+
+.sa-ttacc-tabs li.active a {
+  color: #fff;
+  background: #88b2f6;
+}
+.nav-pills > li > a {
+  border-radius: 2px;
+}
+
+.tab-content > .active {
+  display: block;
+  visibility: visible;
+}
+
+.show_info {
+  list-style: none;
+  margin: 5px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tab-content img {
+  /* width: auto!important;
+  height: auto!important; */
+  width: 100%;
+  width: 100%;
+}
+
+.show_info li {
+  width: 95%;
+  margin: 3px;
+  border: 1px #222 solid;
+  display: inline-block;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 992px) {
+  .show_info li {
+    width: 49%;
+  }
+}
+
+.sa-ttmore {
+  padding: 30px 0 15px;
+}
+
+.sa-ttmoretit {
+  background-color: #32c5d2;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 30px;
+  cursor: pointer;
 }

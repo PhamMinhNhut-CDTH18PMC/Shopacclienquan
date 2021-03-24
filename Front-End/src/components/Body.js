@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Pagination from "./pagnigation";
 import Product from "./Product";
 class Body extends Component {
   render() {
@@ -13,19 +14,12 @@ class Body extends Component {
             <div className="group-content">
               <div className="group-acc">
                 <div className="text-center">
+                  {/*product*/ }
                 <Product />
                 </div>  
               </div>
             </div>
-            <div className="page-next">
-              <ul className="pagination justify-content-center">
-                <a className="nav-link">Trang trước</a>
-                <a className="nav-link active">1</a>
-                <a className="nav-link">2</a>
-                <a className="nav-link">3</a>
-                <a className="nav-link">Trang cuối</a>
-              </ul>
-            </div>
+            <Pagination/>
           </div>
         </div>
       </div>

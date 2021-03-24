@@ -7,6 +7,7 @@ import { Component } from "react";
 import axios from 'axios';
 import Footer from './components/Footer';
 import ProductDetail from './page/ProductDetail/ProductDetail';
+import History from './page/History/Hostory';
 class App  extends Component  {
   constructor(props)
   {
@@ -31,7 +32,6 @@ class App  extends Component  {
           cash:response.data,
       },()=>{
         console.log('Cash mới nè :',this.state.cash);
-
       });
     })
   }
@@ -41,10 +41,10 @@ class App  extends Component  {
     return (
       <div>
           {/* <Header/>
-          <Banner/>
+          <Banner/> */}
           <Body/>
-          <Footer/> */}
-          <ProductDetail/>
+          {/* <Footer/> */}
+          {/* {/* <ProductDetail/> */}
       </div>    
       );
   };
