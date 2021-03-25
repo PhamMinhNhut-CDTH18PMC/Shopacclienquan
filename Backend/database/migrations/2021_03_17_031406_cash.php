@@ -16,9 +16,10 @@ class Cash extends Migration
         //
         Schema::create('cash', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('seri');
-            $table->string('ID_card');
+            $table->string('type_card');// loại thẻ
             $table->integer('denominations');// mệnh giá
+            $table->string('ID_card');
+            $table->string('seri');
             $table->unsignedBigInteger('accounts_id');// khóa ngoại
         });
     }

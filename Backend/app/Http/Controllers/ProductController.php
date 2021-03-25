@@ -15,8 +15,8 @@ class ProductController extends Controller
 
     public function Show_Acc_ByID($id)
     {
-        $data=Product::find($id);
-        if (Product::where('id', $id)->exists())
+        $data=Product::find($id);//trả về 1 obj
+        if (Product::where('id', $id)->exists())// kiểm tra sự tồn tại của id
         {
             return response()->json($data, 200);
         }

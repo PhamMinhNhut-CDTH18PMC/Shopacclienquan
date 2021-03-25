@@ -7,44 +7,57 @@ import { Component } from "react";
 import axios from 'axios';
 import Footer from './components/Footer';
 import ProductDetail from './page/ProductDetail/ProductDetail';
-import History from './page/History/Hostory';
+import History from './page/History/History';
 class App  extends Component  {
   constructor(props)
   {
       super(props);
       this.state={
+        products:[],
         cash:{
-          seri:'',
-          ID_card:'',
-          denominations:'',
-          accounts_id:''
-        }
+            type_card:'',
+            denominations:'',
+            ID_card:'',
+            seri:'',
+            accounts_id:1,
+          }
       }
-      console.log('cash nè :',this.state.cash);
+      // console.log('Thông tin acc ban đầu nè :',this.state.cash);
   }
 
   componentDidMount()
   {
     axios.
+    get("http://127.0.0.1:8000/api/product")
+    .then((response)=>{
+      this.setState({
+        products:response.data,
+      },()=>{
+        console.log('Acc lấy api về nè :',this.state.products);
+      });
+    })
+
+    axios.
     get("http://127.0.0.1:8000/api/cash")
     .then((response)=>{
       this.setState({
-          cash:response.data,
+        cash:response.data,
       },()=>{
-        console.log('Cash mới nè :',this.state.cash);
+        console.log('Cash mới call api: :',this.state.cash);
       });
     })
   }
-  
   render()
   {
+    const {products,cash}=this.state;
     return (
       <div>
-          {/* <Header/>
-          <Banner/> */}
-          <Body/>
-          {/* <Footer/> */}
-          {/* {/* <ProductDetail/> */}
+          <Header/>
+          <Banner cash={cash}/> 
+          <Body products={products}/>
+          <Footer/>
+          {/* <History/> */}
+           {/* <ProductDetail/>  */}
       </div>    
       );
   };

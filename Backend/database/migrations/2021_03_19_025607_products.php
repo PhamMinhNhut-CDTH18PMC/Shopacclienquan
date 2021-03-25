@@ -23,6 +23,9 @@ class Products extends Migration
             $table->integer('gold');// gold
             $table->integer('skin');// skin
             $table->integer('gem');// gem
+            $table->string('rank');// rank
+            $table->string('username');// username của product
+            $table->string('password');// password của product
         });
     }
 

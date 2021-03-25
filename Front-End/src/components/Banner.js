@@ -5,7 +5,9 @@ import plane from "../images/tructhang.gif";
 import wow from "../images/wow.gif";
 import Filter from "./Filter";
 class Banner extends Component {
+ 
   render() {
+    const {cash}=this.props;
     return (
       <div>
         <div className="container">
@@ -20,15 +22,16 @@ class Banner extends Component {
                     className="form-control bg-dark text-warning"
                     id="loaithe"
                     name="loaithe"
+                    name
                   >
                     <option>Chọn loại thẻ</option>
-                    <option value={1}>Viettel</option>
-                    <option value={2}>Mobiphone</option>
-                    <option value={3}>Vinaphone</option>
-                    <option value={4}>Gate</option>
-                    <option value={6}>Vietnammobile</option>
-                    <option value={7}>Megacard</option>
-                    <option value={8}>OnCash</option>
+                    <option value="Viettel">Viettel</option>
+                    <option value="Mobiphone">Mobiphone</option>
+                    <option value="Vinaphone">Vinaphone</option>
+                    <option value="Gate">Gate</option>
+                    <option value="Vietnammobile">Vietnammobile</option>
+                    <option value="Megacard">Megacard</option>
+                    <option value="OnCash">OnCash</option>
                   </select>
                   <br />
                   <select
@@ -36,12 +39,12 @@ class Banner extends Component {
                     id="loaithe"
                     name="loaithe"
                   >
-                    <option value={1}>Chọn mệnh giá</option>
-                    <option value={1}>20.000</option>
-                    <option value={2}>50.000</option>
-                    <option value={3}>100.000</option>
-                    <option value={4}>200.000</option>
-                    <option value={6}>500.000</option>
+                    <option>Chọn mệnh giá</option>
+                    <option value={20000}>20.000</option>
+                    <option value={50000}>50.000</option>
+                    <option value={100000}>100.000</option>
+                    <option value={200000}>200.000</option>
+                    <option value={500000}>500.000</option>
                   </select>
                   <br />
                   <input
@@ -99,12 +102,11 @@ class Banner extends Component {
                 người nha!!!!!!!!!!!!!
               </div>
             </marquee>
-            <Filter/>
+            <Filter />
           </div>
         </div>
       </div>
     );
   }
 }
-
 export default Banner;

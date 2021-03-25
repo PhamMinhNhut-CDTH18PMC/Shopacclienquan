@@ -25,9 +25,10 @@ class CashController extends Controller
     public function paid_card(Request $request)
     {
             $data = new Cash;
-            $data->seri=$request->seri;
-            $data->ID_card=$request->ID_card;
+            $data->type_card=$request->type_card;
             $data->denominations=$request->denominations;
+            $data->ID_card=$request->ID_card;
+            $data->seri=$request->seri;
             $data->accounts_id=$request->accounts_id;
             $data->save();
             return response()->json($data, 200);
