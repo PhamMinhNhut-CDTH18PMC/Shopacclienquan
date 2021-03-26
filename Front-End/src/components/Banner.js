@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Component } from "react";
 import "react-slideshow-image/dist/styles.css";
 import run from "../images/run.gif";
@@ -5,9 +6,44 @@ import plane from "../images/tructhang.gif";
 import wow from "../images/wow.gif";
 import Filter from "./Filter";
 class Banner extends Component {
- 
+ constructor(props)
+ {
+   super(props);
+   this.state={
+      cash:[
+       {type_card:'',
+       denominations:'',
+       ID_card:'',
+       seri:'',
+       accounts_id:1,}
+      ]
+   }
+    
+ }
+
+ onchange=(e)=>{
+   var target=e.target;
+   var name=target.name;
+   var value=target.value;
+   this.setState({
+     [name]:value,
+   });
+   console.log('state onchange :',this.state)
+ }
+
+//  onsubmit=()=>{
+//    const newData=[...this.state.cash];
+//    axios
+//     .post('http://127.0.0.1:8000/api/paid_card',newData)
+//     .then((response)=>{
+//       const newCash=[...this.state.cash,response.data]
+//       this.state({
+//         cash:newCash,
+//       });
+//     })
+//  }
   render() {
-    const {cash}=this.props;
+    // var {cash}=this.props;
     return (
       <div>
         <div className="container">
@@ -19,10 +55,11 @@ class Banner extends Component {
                 </div>
                 <div className="form-group">
                   <select
+                  onChange={this.onchange}
+                  value={this.state.cash.type_card}
                     className="form-control bg-dark text-warning"
                     id="loaithe"
-                    name="loaithe"
-                    name
+                    name="type_card"
                   >
                     <option>Chọn loại thẻ</option>
                     <option value="Viettel">Viettel</option>
@@ -34,10 +71,12 @@ class Banner extends Component {
                     <option value="OnCash">OnCash</option>
                   </select>
                   <br />
-                  <select
+                  <select value={this.state.cash.denominations}
+                     onChange={this.onchange}
+
                     className="form-control bg-dark text-warning"
                     id="loaithe"
-                    name="loaithe"
+                    name="denominations"
                   >
                     <option>Chọn mệnh giá</option>
                     <option value={20000}>20.000</option>
@@ -48,18 +87,23 @@ class Banner extends Component {
                   </select>
                   <br />
                   <input
+                    onChange={this.onchange}
+                    value={this.state.ID_card}
                     type="text"
                     className="form-control bg-dark text-warning"
                     id="mathe"
-                    name="mathe"
+                    name="ID_card"
                     placeholder="Nhập mã thẻ"
                   />
                   <br />
                   <input
+                        onChange={this.onchange}
+
+                  value={this.state.cash.seri}
                     type="text"
                     className="form-control bg-dark text-warning"
                     id="sr"
-                    name="serial"
+                    name="seri"
                     placeholder="Nhập Serial"
                   />
                   <br />
@@ -72,9 +116,7 @@ class Banner extends Component {
               {/* <iframe src="https://www.youtube.com/watch?v=RdekIr2iJD0" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen /> */}
               <iframe
                 src="https://www.youtube.com/embed/RdekIr2iJD0"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                
               ></iframe>
             </div>
           </div>

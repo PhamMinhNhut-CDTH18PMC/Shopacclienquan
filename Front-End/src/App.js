@@ -14,14 +14,9 @@ class App  extends Component  {
       super(props);
       this.state={
         products:[],
-        cash:{
-            type_card:'',
-            denominations:'',
-            ID_card:'',
-            seri:'',
-            accounts_id:1,
-          }
-      }
+        cash:[]
+       }
+      
       // console.log('Thông tin acc ban đầu nè :',this.state.cash);
   }
 
@@ -47,12 +42,14 @@ class App  extends Component  {
       });
     })
   }
+
+  
   render()
   {
     const {products,cash}=this.state;
     return (
       <div>
-          <Header/>
+          <Header/>  
           <Banner cash={cash}/> 
           <Body products={products}/>
           <Footer/>
