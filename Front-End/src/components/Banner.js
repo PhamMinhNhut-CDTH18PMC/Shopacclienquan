@@ -6,44 +6,37 @@ import plane from "../images/tructhang.gif";
 import wow from "../images/wow.gif";
 import Filter from "./Filter";
 class Banner extends Component {
- constructor(props)
- {
-   super(props);
-   this.state={
-      cash:[
-       {type_card:'',
-       denominations:'',
-       ID_card:'',
-       seri:'',
-       accounts_id:1,}
-      ]
-   }
-    
- }
+  constructor(props) {
+    super(props);
+    this.state = {
+        
+          type_card: "",
+          denominations: "",
+          ID_card: "",
+          seri: "",
+          accounts_id: 1,
+    };
+  }
 
- onchange=(e)=>{
-   var target=e.target;
-   var name=target.name;
-   var value=target.value;
-   this.setState({
-     [name]:value,
-   });
-   console.log('state onchange :',this.state)
- }
+  onchange = (e) => {
+    var target = e.target;
+    var name = target.name;
+    var value = target.value;
+    this.setState({
+      [name]: value,
+    });
+    console.log("state onchange :", this.state);
+  };
 
-//  onsubmit=()=>{
-//    const newData=[...this.state.cash];
-//    axios
-//     .post('http://127.0.0.1:8000/api/paid_card',newData)
-//     .then((response)=>{
-//       const newCash=[...this.state.cash,response.data]
-//       this.state({
-//         cash:newCash,
-//       });
-//     })
-//  }
+  onsubmit = () => {
+     const newData = this.state;
+    axios
+      .post("http://127.0.0.1:8000/api/paid_card", newData);
+    console.log(  newData)
+  };
   render() {
     // var {cash}=this.props;
+    // var {cash}=this.state;
     return (
       <div>
         <div className="container">
@@ -55,8 +48,8 @@ class Banner extends Component {
                 </div>
                 <div className="form-group">
                   <select
-                  onChange={this.onchange}
-                  value={this.state.cash.type_card}
+                    onChange={this.onchange}
+                    value={this.state.type_card}
                     className="form-control bg-dark text-warning"
                     id="loaithe"
                     name="type_card"
@@ -71,9 +64,9 @@ class Banner extends Component {
                     <option value="OnCash">OnCash</option>
                   </select>
                   <br />
-                  <select value={this.state.cash.denominations}
-                     onChange={this.onchange}
-
+                  <select
+                    value={this.state.denominations}
+                    onChange={this.onchange}
                     className="form-control bg-dark text-warning"
                     id="loaithe"
                     name="denominations"
@@ -97,9 +90,8 @@ class Banner extends Component {
                   />
                   <br />
                   <input
-                        onChange={this.onchange}
-
-                  value={this.state.cash.seri}
+                    onChange={this.onchange}
+                    value={this.state.seri}
                     type="text"
                     className="form-control bg-dark text-warning"
                     id="sr"
@@ -107,17 +99,13 @@ class Banner extends Component {
                     placeholder="Nhập Serial"
                   />
                   <br />
-
-                  <button className="btn btn-block btn-warning">NẠP THẺ</button>
+                  <button className="btn btn-block btn-warning" type="submit" onClick={this.onsubmit}>NẠP THẺ</button>
                 </div>
               </div>
             </div>
             <div className="col-lg-8">
               {/* <iframe src="https://www.youtube.com/watch?v=RdekIr2iJD0" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen /> */}
-              <iframe
-                src="https://www.youtube.com/embed/RdekIr2iJD0"
-                
-              ></iframe>
+              <iframe src="https://www.youtube.com/embed/RdekIr2iJD0"></iframe>
             </div>
           </div>
         </div>
