@@ -7,7 +7,6 @@ class History extends Component {
   render() {
     return (
       <div>
-        <Header />
         <div className="container">
           <div className="transaction-history">
             <table className="table table-dark table-striped text-warning text-center">
@@ -43,7 +42,6 @@ class History extends Component {
             </table>
           </div>
         </div>
-        <Footer/>
       </div>
     );
   }

@@ -484,3 +484,6 @@ iframe {
   width: 100%;
   height: 97%;
 }
+a.nav-link {
+  font-weight: 900;
+}
