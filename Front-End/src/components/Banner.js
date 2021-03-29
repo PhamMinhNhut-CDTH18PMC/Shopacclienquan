@@ -9,7 +9,6 @@ class Banner extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        
           type_card: "",
           denominations: "",
           ID_card: "",
@@ -17,7 +16,6 @@ class Banner extends Component {
           accounts_id: 1,
     };
   }
-
   onchange = (e) => {
     var target = e.target;
     var name = target.name;
@@ -25,15 +23,15 @@ class Banner extends Component {
     this.setState({
       [name]: value,
     });
-    console.log("state onchange :", this.state);
+    console.log("Phú ngu state :", this.state);
   };
-
   onsubmit = () => {
      const newData = this.state;
     axios
       .post("http://127.0.0.1:8000/api/paid_card", newData);
     console.log(  newData)
   };
+  
   render() {
     // var {cash}=this.props;
     // var {cash}=this.state;

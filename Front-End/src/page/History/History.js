@@ -20,24 +20,10 @@ class History extends Component {
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>phucoccho123</td>
-                  <td>********</td>
+                  <td>Phungu123</td>
+                  <td>12345789</td>
                 </tr>
-                <tr>
-                  <td>2</td>
-                  <td>canhdepzai</td>
-                  <td>********</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>nhanxaolol112</td>
-                  <td>********</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>nhutxaolol113</td>
-                  <td>********</td>
-                </tr>
+                
               </tbody>
             </table>
           </div>

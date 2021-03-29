@@ -53,7 +53,8 @@ class App extends Component {
           <Header />
           <Banner cash={cash} />
           <Route exact path="/history"  component={History}/>
-          <Body  products={products}/>
+          <Route exact path="/"  component={()=><Body products={products}/>}/>
+       
           <Footer />
         
         </div>
