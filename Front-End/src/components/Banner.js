@@ -23,13 +23,15 @@ class Banner extends Component {
     this.setState({
       [name]: value,
     });
-    console.log("Phú ngu state :", this.state);
   };
   onsubmit = () => {
      const newData = this.state;
     axios
       .post("http://127.0.0.1:8000/api/paid_card", newData);
-    console.log(  newData)
+    if(newData)
+    {
+      console.log("Nạp thẻ thành công");
+    }
   };
   
   render() {

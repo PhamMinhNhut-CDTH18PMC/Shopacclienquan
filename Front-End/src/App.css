@@ -487,3 +487,11 @@ iframe {
 a.nav-link {
   font-weight: 900;
 }
+
+.btncard a:hover {
+  text-decoration: none;
+  color:#151515;
+}
+a{
+  color:white !important;
+}

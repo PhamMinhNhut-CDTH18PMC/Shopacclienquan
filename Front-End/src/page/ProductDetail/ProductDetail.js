@@ -9,8 +9,6 @@ class ProductDetail extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <Banner />
         <div className="sa-mainsa">
           <div className="container">
             <div className="sa-lprod">
@@ -67,7 +65,6 @@ class ProductDetail extends Component {
             </div>
           </div>
         </div>
-        <Footer/>
       </div>
     );
   }

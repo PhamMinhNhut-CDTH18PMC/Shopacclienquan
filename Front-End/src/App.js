@@ -54,9 +54,8 @@ class App extends Component {
           <Banner cash={cash} />
           <Route exact path="/history"  component={History}/>
           <Route exact path="/"  component={()=><Body products={products}/>}/>
-       
+          <Route exact path="/productdetail" component={ProductDetail} />
           <Footer />
-        
         </div>
       </Router>
     );

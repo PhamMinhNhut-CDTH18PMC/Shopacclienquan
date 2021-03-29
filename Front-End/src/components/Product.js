@@ -1,7 +1,9 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 import Acc1 from "../images/Acc1.jpg";
 import Sale from "../images/seo.png";
 import Star from "../images/star.png";
+import "../App.css";
 class Product extends Component {
   render() {
     const { products, index } = this.props;
@@ -37,7 +39,10 @@ class Product extends Component {
             </div>
             <p>{products.rank}</p>
             <div className="btn-groupp">
-              <button className="btn btn-outline-light btncard">XEM ACC</button>
+              <button className="btn btn-outline-light btncard">
+                <Link to="/productdetail">XEM ACC</Link>
+                {/* XEM ACC */}
+              </button>
               <button className="btn btn-warning btncard">MUA NGAY</button>
             </div>
           </div>
