@@ -2,7 +2,6 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Component } from "react";
 import "../../App.css";
-import Acc1 from '../../images/Acc1.jpg';
 class ProductDetail extends Component {
   constructor(props) {
     super(props);
@@ -15,11 +14,14 @@ class ProductDetail extends Component {
     axios.get(`http://127.0.0.1:8000/api/product/${this.props.match.params.id}`).then((response)=>{
       this.setState({
         products:response.data
+      },()=>{
+        console.log('lay api productdetails :',this.state.products);
       })
     });
   }
   render() {
-
+    const {products}=this.state
+    const linkImage=`http://127.0.0.1:8000/img/${products.imageProduct}`;
     return (
       <div>
         <div className="sa-mainsa">
@@ -35,7 +37,7 @@ class ProductDetail extends Component {
                       </h1>
                       <ul className="sa-ttactul">
                         <li className="sa-ttac-pri">
-                          45000
+                          {this.state.products.price}
                           <sup>đ</sup>
                         </li>
                         <li className="sa-ttac-btn">
@@ -56,15 +58,9 @@ class ProductDetail extends Component {
                     <div className="tab-content sa-ttacc-tcont" >
                           <div className="tab-pane show active">
                               <ul className="show_info">
+                              
                                   <li>
-                                    <img alt="img-champ" src={Acc1}/>
-                                  </li>
-                                  <li>
-                                    <img alt="img-champ" src={Acc1}/>
-                                  </li><li>
-                                    <img alt="img-champ" src={Acc1}/>
-                                  </li><li>
-                                    <img alt="img-champ" src={Acc1}/>
+                                    <img alt="img-champ" src={linkImage}/>
                                   </li>
                               </ul>
                           </div>

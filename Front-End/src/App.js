@@ -18,7 +18,6 @@ class App extends Component {
       cash: [],
     };
 
-    // console.log('Thông tin acc ban đầu nè :',this.state.cash);
   }
 
   componentDidMount() {
@@ -44,12 +43,7 @@ class App extends Component {
       );
     });
   }
-  handleBuyNow=(id)=>{
-    var {products}=this.state;
-    var index=this.findIndex(id);
-    console.log(index);
-  }
-  
+
 
   findIndex = (id) =>{
     var{products} = this.state;

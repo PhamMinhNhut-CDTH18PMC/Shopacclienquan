@@ -1,17 +1,14 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import Acc1 from "../images/Acc1.jpg";
 import Sale from "../images/seo.png";
 import Star from "../images/star.png";
 import "../App.css";
+
 class Product extends Component {
-  handleBuyNow=()=>
-  {
-    console.log(this.props.products);
-  }
+ 
   render() {
     const { products, index } = this.props;
-    const linkImage=`http://127.0.0.1:8000/img/${products.imageProduct}`;
+     const linkImage=`http://127.0.0.1:8000/img/${products.imageProduct}`;
     return (
       <div className="acc">
         <div className="cardd text-light card1">
