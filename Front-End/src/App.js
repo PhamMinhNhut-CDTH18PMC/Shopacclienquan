@@ -39,22 +39,41 @@ class App extends Component {
           cash: response.data,
         },
         () => {
-          console.log("Cash mới call api: :", this.state.cash);
+          // console.log("Cash mới call api: :", this.state.cash);
         }
       );
     });
   }
+  handleBuyNow=(id)=>{
+    var {products}=this.state;
+    var index=this.findIndex(id);
+    console.log(index);
+  }
+  
 
+  findIndex = (id) =>{
+    var{products} = this.state;
+    var result=-1;
+    products.forEach((products,index)=>{
+      if(products.id===id)
+      {
+        result=index;
+      }
+    });
+    return result;
+  }
   render() {
-    const { products, cash } = this.state;
+    const { products, cash,handleBuyNow } = this.state;
     return (
       <Router>
         <div>
           <Header />
           <Banner cash={cash} />
           <Route exact path="/history"  component={History}/>
-          <Route exact path="/"  component={()=><Body products={products}/>}/>
-          <Route exact path="/productdetail" component={ProductDetail} />
+          <Route exact path="/"  component={()=><Body products={products} handleBuyNow={handleBuyNow} />}/>
+          {/* <Route exact path="/productdetail/:id" component={({match})=><ProductDetail match={match}/>} /> */}
+          <Route exact path="/productdetail/:id" component={ProductDetail} products={products}/>
+
           <Footer />
         </div>
       </Router>

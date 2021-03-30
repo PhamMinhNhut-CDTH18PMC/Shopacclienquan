@@ -11,7 +11,7 @@ class Body extends Component {
     const   elementProduct=products.map((products,index)=>{
       return <Product key={products.id} index={index} products={products} />
     })
-    console.log('ngu :',products);
+    // console.log('ngu :',products);
     return (
       <div className="body">
         <div className="container-fluid text-center">

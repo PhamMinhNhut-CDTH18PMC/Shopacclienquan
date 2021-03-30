@@ -1,12 +1,25 @@
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Component } from "react";
-import Banner from "../../components/Banner";
 import "../../App.css";
-import Header from "../../components/Header";
 import Acc1 from '../../images/Acc1.jpg';
-import Footer from "../../components/Footer";
 class ProductDetail extends Component {
+  constructor(props) {
+    super(props);
+   this.state={
+     products:[],
+   }
+  }
+  componentDidMount()
+  {
+    axios.get(`http://127.0.0.1:8000/api/product/${this.props.match.params.id}`).then((response)=>{
+      this.setState({
+        products:response.data
+      })
+    });
+  }
   render() {
+
     return (
       <div>
         <div className="sa-mainsa">
@@ -18,7 +31,7 @@ class ProductDetail extends Component {
                     <div className="sa-ttactit clearfix">
                       <h1 className="sa-ttacc-tit">
                         <span className="title-acc-view"> Acc</span>
-                        #1111
+                        #{this.state.products.id}
                       </h1>
                       <ul className="sa-ttactul">
                         <li className="sa-ttac-pri">

@@ -5,11 +5,13 @@ import Sale from "../images/seo.png";
 import Star from "../images/star.png";
 import "../App.css";
 class Product extends Component {
+  handleBuyNow=()=>
+  {
+    console.log(this.props.products);
+  }
   render() {
     const { products, index } = this.props;
     const linkImage=`http://127.0.0.1:8000/img/${products.imageProduct}`;
-    console.log('link ảnh nè :', linkImage);
-    console.log('index nè :', index);
     return (
       <div className="acc">
         <div className="cardd text-light card1">
@@ -39,8 +41,8 @@ class Product extends Component {
             </div>
             <p>{products.rank}</p>
             <div className="btn-groupp">
-              <button className="btn btn-outline-light btncard">
-                <Link to="/productdetail">XEM ACC</Link>
+              <button className="btn btn-outline-light btncard"  onClick={this.handleBuyNow} >
+                <Link to={`/productdetail/${products.id}`}>XEM ACC</Link>
                 {/* XEM ACC */}
               </button>
               <button className="btn btn-warning btncard">MUA NGAY</button>
