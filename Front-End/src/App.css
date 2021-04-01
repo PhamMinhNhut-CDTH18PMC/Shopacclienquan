@@ -517,3 +517,16 @@ a.nav-link {
   outline: 0;
   background: url(./images/bgddn.png) center no-repeat;
 }
+
+.sa-info{
+  display: block;
+}
+.modal-body  h3{
+  color: red;
+  margin-right: 215px;
+}
+
+.button-group
+{
+  justify-content: center;
+}

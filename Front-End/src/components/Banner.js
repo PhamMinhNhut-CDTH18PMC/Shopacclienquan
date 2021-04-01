@@ -36,8 +36,6 @@ class Banner extends Component {
   };
   
   render() {
-    // var {cash}=this.props;
-    // var {cash}=this.state;
     return (
       <div>
         <div className="container">

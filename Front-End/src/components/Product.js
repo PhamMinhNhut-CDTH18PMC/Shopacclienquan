@@ -5,10 +5,9 @@ import Star from "../images/star.png";
 import "../App.css";
 
 class Product extends Component {
- 
   render() {
     const { products, index } = this.props;
-     const linkImage=`http://127.0.0.1:8000/img/${products.imageProduct}`;
+    const linkImage = `http://127.0.0.1:8000/img/${products.imageProduct}`;
     return (
       <div className="acc">
         <div className="cardd text-light card1">
@@ -37,12 +36,71 @@ class Product extends Component {
               </div>
             </div>
             <p>{products.rank}</p>
+
             <div className="btn-groupp">
-              <button className="btn btn-outline-light btncard"  onClick={this.handleBuyNow} >
+              <button
+                className="btn btn-outline-light btncard"
+                onClick={this.handleBuyNow}
+              >
                 <Link to={`/productdetail/${products.id}`}>XEM ACC</Link>
                 {/* XEM ACC */}
               </button>
-              <button className="btn btn-warning btncard">MUA NGAY</button>
+              <button
+                className="btn btn-warning btncard"
+                data-toggle="modal"
+                data-target="#myModal2"
+              >
+                MUA NGAY
+              </button>
+            </div>
+
+            {/**modal */}
+            <div className="modal" id="myModal2">
+              <div className="modal-dialog">
+                <div className="modal-content text-center">
+                  <div className="modal-header">
+                    <h4 className="modal-title text-dark" id="myModalLabel">
+                      <b>THÔNG BÁO</b>
+                    </h4>
+                    <button
+                      type="button"
+                      className="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+
+                  <div className="modal-body">
+                    <h3>Bạn muốn mua Acc # {products.id}</h3>
+                    <div className="button-group">
+                      <button
+                        type="button"
+                        className="btn btn-danger"
+                        data-dismiss="modal"
+                      >
+                        Hủy bỏ
+                      </button>
+                      <button
+                        type="button"
+                        className="btn btn-danger"
+                      >
+                        Mua ngay
+                      </button>
+                    </div>
+                  </div>
+                  <div className="modal-footer">
+                    <button
+                      type="button"
+                      className="btn btn-danger"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
