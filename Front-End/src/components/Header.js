@@ -3,7 +3,16 @@ import logo from "../images/logo.png";
 import { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import History from "../page/History/History";
+import axios from "axios";
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state={
+      User:[],
+      isLogin:true,
+    }
+  }
+
   render() {
     return (
       <div className="header">
@@ -13,7 +22,7 @@ class Header extends Component {
             {/* <a className="navbar-brand">
                 <img src={logo} alt="logo" className="logo" />
               </a> */}
-            <Link className="navbar-brand"  to="/">
+            <Link className="navbar-brand" to="/">
               <img src={logo} alt="logo" className="logo" />
             </Link>
             <button
@@ -68,7 +77,7 @@ class Header extends Component {
                 </li>
               </ul>
             </div>
-            <button
+            {/* <button
               type="button"
               className="btn btn-outline-warning justify-content-end"
               data-toggle="modal"
@@ -76,7 +85,61 @@ class Header extends Component {
             >
               <i className="fas fa-sign-in-alt" />
               ĐĂNG NHẬP
-            </button>
+            </button> */}
+            {this.state.isLogin===true ?  <div className="dropdown">
+              <button
+                className="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                minhnhut-3$
+              </button>
+              <div
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <a className="dropdown-item" href="#">
+                  Thông tin tài khoản
+                </a>
+                <a className="dropdown-item" href="#">
+                  Đăng xuất
+                </a>
+              </div>
+            </div>:<button
+              type="button"
+              className="btn btn-outline-warning justify-content-end"
+              data-toggle="modal"
+              data-target="#myModal"
+            >
+              <i className="fas fa-sign-in-alt" />
+              ĐĂNG NHẬP
+            </button>}
+            {/* <div className="dropdown">
+              <button
+                className="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                minhnhut-3$
+              </button>
+              <div
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <a className="dropdown-item" href="#">
+                  Thông tin tài khoản
+                </a>
+                <a className="dropdown-item" href="#">
+                  Đăng xuất
+                </a>
+              </div>
+            </div> */}
           </div>
         </nav>
         <div className="modal" id="myModal">
@@ -99,6 +162,12 @@ class Header extends Component {
                 <button type="button" className="btn btn-outline-primary">
                   <i className="fab fa-facebook" />
                   ĐĂNG NHẬP BẰNG FACEBOOK
+                </button>
+              </div>
+              <div className="modal-body">
+                <button type="button" className="btn btn-outline-primary">
+                  <i className="far fa-user"></i>
+                  ĐĂNG NHẬP BẰNG TÀI KHOẢN
                 </button>
               </div>
               <div className="modal-footer">
@@ -161,5 +230,4 @@ class Header extends Component {
     );
   }
 }
-
 export default Header;

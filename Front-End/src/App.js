@@ -10,6 +10,7 @@ import ProductDetail from "./page/ProductDetail/ProductDetail";
 import History from "./page/History/History";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Product from "./components/Product";
+import Login from "./page/Login/Login";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -71,6 +72,7 @@ class App extends Component {
           <Footer />
         </div>
       </Router>
+      // <Login/>
     );
   }
 }

@@ -32,6 +32,7 @@ class Banner extends Component {
     {
       console.log("Nạp thẻ thành công");
     }
+
   };
   
   render() {

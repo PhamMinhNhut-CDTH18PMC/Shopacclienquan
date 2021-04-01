@@ -492,6 +492,28 @@ a.nav-link {
   text-decoration: none;
   color:#151515;
 }
-a{
+/* a{
   color:white !important;
+} */
+
+.sl-lrins {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+}
+
+.dropdown, .dropup {
+  position: relative;
+}
+
+.sl-lrins .dropdown button {
+  border: none;
+  width: 169px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 15px;
+  color: #fff;
+  position: relative;
+  outline: 0;
+  background: url(./images/bgddn.png) center no-repeat;
 }

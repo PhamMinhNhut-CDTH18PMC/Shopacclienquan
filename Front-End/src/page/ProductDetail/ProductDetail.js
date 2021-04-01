@@ -8,6 +8,7 @@ class ProductDetail extends Component {
    this.state={
      products:[],
    }
+   console.log('id:', this.props.match.params.id);
   }
   componentDidMount()
   {
